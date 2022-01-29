@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body{
+    font-family: 'Lato',arial,sans-serif;
+    min-height: 100vh;
+    background-color: #f3f3f3c2;
+    padding-top: 61px;
+}
+.search{
+    max-width: 23.25rem;
+    width: 100%;
+}
+.search-btn{
+color: #4d36f8;
+border-color: #4d36f8;
+}
+.account img{
+    width: 2rem;
+    border-radius: 50%;
+}
+.navbar{
+    background-color: #fff;
+    border-bottom: 1px solid #4d36f84d;
+    padding: 0.6rem 0;
+}
+.navbar-brand,
+.account{
+    max-width: 19.875rem;
+    width: 100%;
+}
+.account{
+    display: flex;
+    justify-content: space-between;
+}
+.account a {
+    display: flex;
+    align-items:center;
+    color: #4d36f8;
+    text-decoration: none;
+    font-weight: 600;
+}
+.account a i{
+    font-size: 1.6rem;
+}
+.account a i,
+.account img{
+    margin-right: 6px;
+}

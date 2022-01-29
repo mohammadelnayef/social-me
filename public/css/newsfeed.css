@@ -1,0 +1,38 @@
+.post-card{
+    max-width: 34rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    min-height: 22.875rem;
+    margin: 2rem auto;
+    border: 1px solid #4d36f84d;
+}
+.post-card-header{
+    width: 100%;
+    padding: 0.7rem 2rem;
+}
+.post-card-header img{
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.post-card-header a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #4d36f8;
+}
+.post-card-body{
+    width: 100%;
+}
+.post-card-body img{
+    width: 100%;
+}
+.post-card-footer{
+    width: 100%;
+    padding: 0.7rem 2rem;
+}
+.post-card-footer i{
+    font-size: 1.6rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
