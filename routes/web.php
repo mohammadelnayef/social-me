@@ -26,3 +26,7 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/single-post', function () {
+    return view('single-post');
+});
+

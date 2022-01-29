@@ -29,7 +29,24 @@
     </nav>
 
     <div class="container post-container">
-        
+        <div class="row my-5">
+            <div class="image-section col-8">
+                <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg" alt="">
+                <div class="overlay"></div>
+                <img class="" src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg" alt="">
+            </div>
+            <div class="comments-section col-4">
+                <div class="post-profile-info">
+                        <a href=""><img src="/img/avatar.png" alt="profile picture"></a>
+                        <a href="">mohammadelnayef</a>
+                        <p>Image description here...</p>
+                </div>
+                <div class="all-comments"></div>
+                <div class="interaction">
+                    
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
