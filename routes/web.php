@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Random comment
+
 Route::get('/', function () {
     return view('home');
 });
