@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/single-post.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/emojibuttonlistjs.min.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>Post Name</title>
 </head>
@@ -39,11 +40,24 @@
                 <div class="post-profile-info">
                         <a href=""><img src="/img/avatar.png" alt="profile picture"></a>
                         <a href="">mohammadelnayef</a>
-                        <p>Image description here...</p>
+                        <p class="mb-0">Image description here...</p>
+                        <a href="">Go Back</a>
+                        <hr>
                 </div>
-                <div class="all-comments"></div>
+                <div class="all-comments">
+   
+                </div>
                 <div class="interaction">
-                    
+                    <hr>
+                    <div class="interaction-btns">
+                        <i class="bi bi-heart-fill"></i>
+                        <i class="bi bi-chat"></i>
+                        <p>Liked by 100 people</p>
+                    </div>
+                    <div class="interaction-comment">
+                    <i id="picker" class="bi bi-emoji-wink"></i>
+                    <input id="example" type="text" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,6 +68,8 @@
     </footer>
     
     <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/emojibuttonlistjs.min.js') }}"></script>
+    <script src="{{ asset('js/single.post.js') }}"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
 </body>
 </html>

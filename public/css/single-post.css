@@ -46,3 +46,6 @@ body{
     color: #4d36f8;
     font-weight: 600;
 }
+.all-comments{
+    min-height: 31.25rem;
+}
