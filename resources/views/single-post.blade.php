@@ -37,15 +37,25 @@
                 <img class="" src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__480.jpg" alt="">
             </div>
             <div class="comments-section col-4">
-                <div class="post-profile-info">
-                        <a href=""><img src="/img/avatar.png" alt="profile picture"></a>
-                        <a href="">mohammadelnayef</a>
-                        <p class="mb-0">Image description here...</p>
-                        <a href="">Go Back</a>
-                        <hr>
+                <div class="post-profile-info mt-2">
+                    <a href=""><img src="/img/avatar.png" alt="profile picture"></a>
+                    <a href="">mohammadelnayef</a>
+                    <a class="back-btn btn btn-danger" href="">Close</a>             
+                    <p class="mt-2 ">Image description here...</p>
+                    <hr>
                 </div>
                 <div class="all-comments">
-   
+                    <div class="comment mt-3">
+                    <a href=""><img src="/img/avatar.png" alt="profile picture"></a>
+                    <a href="">mohammadelnayef</a>
+                    <p class="d-inline">nice pic 😍</p> 
+                    </div>
+                    <div class="comment mt-3">
+                    <a href=""><img src="/img/avatar.png" alt="profile picture"></a>
+                    <a href="">mohammadelnayef</a>
+                    <p class="d-inline">awesome 😂</p> 
+                    </div>                 
+                        
                 </div>
                 <div class="interaction">
                     <hr>
@@ -54,9 +64,10 @@
                         <i class="bi bi-chat"></i>
                         <p>Liked by 100 people</p>
                     </div>
-                    <div class="interaction-comment">
-                    <i id="picker" class="bi bi-emoji-wink"></i>
-                    <input id="example" type="text" />
+                    <div class="interaction-comment mt-2">
+                    <i id="picker" class="bi bi-emoji-smile"></i>
+                    <input id="example" type="text" placeholder="Add a comment..."/>
+                    <div class="btn btn-success">Post</div>
                     </div>
                 </div>
             </div>

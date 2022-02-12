@@ -38,8 +38,16 @@ body{
     background-color: #fff;
     border-radius: 0 10px 10px 0;
 }
+.post-profile-info{
+    position: relative;
+}
+.post-profile-info .back-btn{
+    position: absolute;
+    right: 2px;
+    top: 0px;
+}
 .post-profile-info img{
-    width: 2.5rem;
+    width: 2rem;
     border-radius: 50%;
 }
 .post-profile-info a:nth-of-type(2){
@@ -47,5 +55,49 @@ body{
     font-weight: 600;
 }
 .all-comments{
-    min-height: 31.25rem;
+    min-height: 30.5rem;
+}
+.all-comments img{
+    width: 35px;
+    border-radius: 50%;
+}
+#example{
+    width: 65%;
+    height: 38px;
+    padding: 0 1rem;
+}
+.interaction-btns{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.interaction-btns .bi{
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+.bi-heart-fill{
+    height: 30px;
+}
+.interaction-btns p{
+    font-size: 1rem;
+    margin: 0 0 0 0.5rem;
+}
+.interaction-btns .bi .bi-heart-fill{
+    height: 30px;
+}
+.interaction-comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.interaction-comment .btn-success{
+    margin-left: -20px;
+    border-radius: 0 5px 5px 0;
+    background-color: #4d36f8;
+    border-color: #4d36f8;
+}
+.interaction-comment .bi-emoji-smile{
+    font-size: 1.6rem;
+    color: #4d36f8;
+    cursor: pointer;
 }
