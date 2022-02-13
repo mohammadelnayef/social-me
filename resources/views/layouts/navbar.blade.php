@@ -4,8 +4,15 @@
             <img src="/img/socialme2.svg" alt="SocialMe Logo" width="100">
         </a>
       <form class="d-flex search">
+      <i class="bi bi-search"></i>
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn search-btn" type="submit">Search</button>
+        <div class="box arrow-top">
+        <a href=""><img src="/img/avatar.png" alt="profile picture">mohammad elnayef</a>
+        <a href=""><img src="/img/avatar.png" alt="profile picture">alex vasile</a>
+        <a href=""><img src="/img/avatar.png" alt="profile picture">mihai costel</a>
+        <a href=""><img src="/img/avatar.png" alt="profile picture">Laurentiu Dan</a>
+        <a href=""><img src="/img/avatar.png" alt="profile picture">Petru Ion</a>
+        </div>
       </form>
       <div class="account">
           <a href=""><i class="bi bi-house-door-fill"></i>Newsfeed</a>
