@@ -48,3 +48,9 @@ border-color: #4d36f8;
 .account img{
     margin-right: 6px;
 }
+footer{
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+    padding: 2rem;
+}
