@@ -15,9 +15,9 @@
         </div>
       </form>
       <div class="account">
-          <a href=""><i class="bi bi-house-door-fill"></i>Newsfeed</a>
-          <a href=""><img src="/img/avatar.png" alt="profile picture">Profile</a>
-          <a href=""><i class="bi bi-door-open-fill"></i>Sign Out</a>
+          <a href="/newsfeed"><i class="bi bi-house-door-fill"></i>Newsfeed</a>
+          <a href="/profile"><img src="/img/avatar.png" alt="profile picture">Profile</a>
+          <a href="#"><i class="bi bi-door-open-fill"></i>Sign Out</a>
       </div>
     </div>
 </nav>
