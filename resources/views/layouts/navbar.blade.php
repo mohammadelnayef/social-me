@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="/img/socialme2.svg" alt="SocialMe Logo" width="100">
         </a>
       <form class="d-flex search">

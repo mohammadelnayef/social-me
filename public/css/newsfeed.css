@@ -36,3 +36,15 @@
     margin-right: 10px;
     cursor: pointer;
 }
+.post-card-footer .bi-heart-fill::before{
+    color: #a4a4a4;
+}
+.post-card-footer a i{
+    color: #4d36f8;
+}
+.post-card-footer .input-group p{
+    flex: 100%;
+    padding-top: 1rem;
+    margin-bottom: 0;
+    color: #9e9e9e;
+}

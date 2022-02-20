@@ -33,15 +33,21 @@
                     <div class="row">
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <div class="profile-post"></div>
+                            <a href="/single-post">
+                                <div class="profile-post"></div>
+                            </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <div class="profile-post"></div>
+                            <a href="/single-post">
+                                <div class="profile-post"></div>
+                            </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <div class="profile-post"></div>
+                            <a href="/single-post">
+                                <div class="profile-post"></div>
+                            </a>
                         </div>
 
                     </div>
@@ -49,15 +55,21 @@
                     <div class="row">
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <div class="profile-post"></div>
+                            <a href="/single-post">
+                                <div class="profile-post"></div>
+                            </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <div class="profile-post"></div>
+                            <a href="/single-post">
+                                <div class="profile-post"></div>
+                            </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <div class="profile-post"></div>
+                            <a href="/single-post">
+                                <div class="profile-post"></div>
+                            </a>
                         </div>
                         
                     </div>
