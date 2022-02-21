@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+// Route::get('/create-user', function () {
+//     return view('home');
+// });
+
 Route::get('/newsfeed', function () {
     return view('newsfeed');
 });
