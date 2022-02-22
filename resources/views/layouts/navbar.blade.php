@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/newsfeed">
             <img src="/img/socialme2.svg" alt="SocialMe Logo" width="100">
         </a>
       <form class="d-flex search">
@@ -16,8 +16,13 @@
       </form>
       <div class="account">
           <a href="/newsfeed"><i class="bi bi-house-door-fill"></i>Newsfeed</a>
-          <a href="/profile"><img src="/img/avatar.png" alt="profile picture">Profile</a>
-          <a href="#"><i class="bi bi-door-open-fill"></i>Sign Out</a>
+          <a href="/profile"><img src="/img/avatar.png" alt="profile picture">{{ Auth::user()->name }}</a>
+          <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bi bi-door-open-fill"></i>Sign Out</a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST">
+          @csrf
+          </form>
+          
       </div>
     </div>
 </nav>

@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-    <title>Welcome to SocialMe</title>
+    <title>Create an account | SocialMe </title>
 </head>
 <body>
     <div class="container">
-        
         <div class="row custom-row">
             <div class="col-6">
                 <img class="social-me-logo" src="/img/socialme2.svg" alt="SocialMe Logo">
@@ -26,18 +25,27 @@
                 </ul>
                 </div>
             @endif
-            <form action="/login" method="POST">
+            <h1 class="pb-2">Create an account</h1>
+            <form action="/register" method="POST">
                 @csrf
                 <div class="mb-3">
+                  <label for="exampleInputName" class="form-label">Name</label>
+                  <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                </div>
+                <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-primary">Log In</button>
-                <a href="/create-user" class="btn btn-success">Create new account</a>
+                <div class="mb-3">
+                  <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                  <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword2">
+                </div>
+                <button type="submit" class="btn btn-success">Create account</button>
+                <a href="/" class="btn btn-danger">Back to Log In</a>
               </form>
            </div>
         </div>

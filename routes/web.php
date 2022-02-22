@@ -16,15 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->middleware(['guest']);
 
-// Route::get('/create-user', function () {
-//     return view('home');
-// });
+Route::get('/create-user', function () {
+    return view('register');
+});
 
 Route::get('/newsfeed', function () {
     return view('newsfeed');
-});
+})->middleware(['auth']);
 
 Route::get('/profile', function () {
     return view('profile');
