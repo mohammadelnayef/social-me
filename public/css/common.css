@@ -86,9 +86,12 @@ border-color: #4d36f8;
     border-bottom: 1px solid #4d36f84d;
     padding: 0.6rem 0;
 }
-.navbar-brand,
 .account{
-    max-width: 22.875rem;
+    max-width: 28.875rem;
+    width: 100%;
+}
+.navbar-brand{
+    max-width: 17rem;
     width: 100%;
 }
 .account{

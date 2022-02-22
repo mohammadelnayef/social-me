@@ -15,18 +15,18 @@
                     <img src="/img/avatar.png" alt="Profile Picture">
                 </div>
                 <div class="profile-info">
-                    <h2>{{ Auth::user()->name }}</h2>
+                    <h2>{{ Auth::user()->user_id }}</h2>
                     <div class="profile-stats">
                         <p><b>50</b> posts</p>
                         <p><b>100</b> followers</p>
                         <p><b>130</b> following</p>
                     </div>
-                    <h1>{{ Auth::user()->email }}</h1>
+                    <h1>{{ Auth::user()->name }}</h1>
                     <div class="profile-bio">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, error.
                     </div>
                     <a class="btn btn-success mt-2" href="">Follow</a> 
-                    <a class="btn btn-warning mt-2" href="">Edit Profile</a> 
+                    <a class="btn btn-warning mt-2" href="/edit-profile/placeholder">Edit Profile</a> 
                 </div>
             </div>
             <div class="profile-body">
@@ -34,19 +34,19 @@
                     <div class="row">
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <a href="/single-post">
+                            <a href="/post/placeholder">
                                 <div class="profile-post"></div>
                             </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <a href="/single-post">
+                            <a href="/post/placeholder">
                                 <div class="profile-post"></div>
                             </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <a href="/single-post">
+                            <a href="/post/placeholder">
                                 <div class="profile-post"></div>
                             </a>
                         </div>
@@ -56,19 +56,19 @@
                     <div class="row">
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <a href="/single-post">
+                            <a href="/post/placeholder">
                                 <div class="profile-post"></div>
                             </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <a href="/single-post">
+                            <a href="/post/placeholder">
                                 <div class="profile-post"></div>
                             </a>
                         </div>
 
                         <div class=".col-12 .col-md-6 col-lg-4">
-                            <a href="/single-post">
+                            <a href="/post/placeholder">
                                 <div class="profile-post"></div>
                             </a>
                         </div>

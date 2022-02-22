@@ -16,7 +16,7 @@
       </form>
       <div class="account">
           <a href="/newsfeed"><i class="bi bi-house-door-fill"></i>Newsfeed</a>
-          <a href="/profile"><img src="/img/avatar.png" alt="profile picture">{{ Auth::user()->name }}</a>
+          <a href="/profile/placeholder"><img src="/img/avatar.png" alt="profile picture">{{ Auth::user()->user_id }}</a>
           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bi bi-door-open-fill"></i>Sign Out</a>
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST">

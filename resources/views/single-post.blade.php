@@ -19,7 +19,7 @@
             <div class="post-profile-info mt-2">
                 <a href=""><img src="/img/avatar.png" alt="profile picture"></a>
                 <a href="">{{ Auth::user()->name }}</a>
-                <a class="back-btn btn btn-danger" href="{{ url()->previous() }}">Close</a>             
+                <a class="back-btn btn btn-danger" href="{{ url()->previous()}}">Close</a>             
                 <p class="mt-2 ">Image description here...</p>
                 <hr>
             </div>

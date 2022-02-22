@@ -1,0 +1,33 @@
+.update-container{
+    display: flex;
+    height: 84vh;
+    justify-content: center;
+    align-items: center;
+}
+.update-row{
+    width: 100%;
+}
+.img-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.img-wrap img{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0 8px 24px -15px #3d4253b3;
+}
+.form-wrap{
+    background: #fff;
+    padding: 4rem 1rem;
+    box-shadow: 0 8px 24px -15px #3d4253b3;
+    border-radius: 12px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}

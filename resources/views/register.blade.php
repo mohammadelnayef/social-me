@@ -29,7 +29,11 @@
             <form action="/register" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="exampleInputName" class="form-label">Name</label>
+                  <label for="exampleInputID" class="form-label">ID</label>
+                  <input type="text" name="user_id" class="form-control" id="exampleInputID" aria-describedby="idHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputName" class="form-label">Full Name</label>
                   <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
                 </div>
                 <div class="mb-3">

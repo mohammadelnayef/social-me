@@ -22,15 +22,19 @@ Route::get('/create-user', function () {
     return view('register');
 });
 
+Route::get('/edit-profile/{user_id}', function () {
+    return view('edit-profile');
+});
+
 Route::get('/newsfeed', function () {
     return view('newsfeed');
 })->middleware(['auth']);
 
-Route::get('/profile', function () {
+Route::get('/profile/{user_id}', function () {
     return view('profile');
 });
 
-Route::get('/single-post', function () {
+Route::get('/post/{post_id}', function () {
     return view('single-post');
 });
 
