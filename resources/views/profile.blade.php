@@ -12,7 +12,12 @@
         <div class="col-12">
             <div class="profile-head">
                 <div class="profile-picture">
+                    @empty(Auth::user()->profile_img)
                     <img src="/img/avatar.png" alt="Profile Picture">
+                    @endempty
+                    <img src="{{ Storage::url(Auth::user()->profile_img) }}" alt="Profile Picture">
+                    
+                    
                 </div>
                 <div class="profile-info">
                     <h2>{{ Auth::user()->user_id }}</h2>
@@ -26,7 +31,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, error.
                     </div>
                     <a class="btn btn-success mt-2" href="">Follow</a> 
-                    <a class="btn btn-warning mt-2" href="/edit-profile/placeholder">Edit Profile</a> 
+                    <a class="btn btn-warning mt-2" href="/edit-profile/{{ Auth::id() }}">Edit Profile</a> 
                 </div>
             </div>
             <div class="profile-body">

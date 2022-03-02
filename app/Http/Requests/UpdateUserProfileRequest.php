@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
+use Auth;
 
 class UpdateUserProfileRequest extends FormRequest
 {
@@ -11,9 +13,14 @@ class UpdateUserProfileRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(Request $request)
     {
-        return false;
+        if( Auth::check() ){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -24,10 +31,10 @@ class UpdateUserProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'profile_img' => 'required|image|size:5100',
-            'user_id' => 'required|unique|max:255'
-            'full_name' => 'required|max:255'
-            'description' => 'max:1000'
+            'profile_img' => 'mimes:jpg,bmp,png|max:5100',
+            'user_id' => 'required|unique:users|max:35',
+            'full_name' => 'required|max:35',
+            'description' => 'max:255'
         ];
     }
 }

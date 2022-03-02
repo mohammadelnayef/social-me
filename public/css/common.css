@@ -79,6 +79,8 @@ border-color: #4d36f8;
 }
 .account img{
     width: 2rem;
+    height: 2rem;
+    object-fit: cover;
     border-radius: 50%;
 }
 .navbar{

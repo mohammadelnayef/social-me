@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,28 +14,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//------------------------- Authenticated Routes ------------------------
+Route::middleware(['auth'])->group(function () {
 
-Route::get('/', function () {
-    return view('home');
-})->middleware(['guest']);
-
-Route::get('/create-user', function () {
-    return view('register');
+    Route::get('/newsfeed', [UserController::class, 'showNewsfeed'])->name('newsfeed');
+    Route::get('/edit-profile/{user_id}', [UserController::class, 'editProfile'])->name('edit.profile');
+    Route::post('/update-profile',[UserController::class,'updateUserProfile'])->name('update.profile');
+    
 });
+//-----------------------------------------------------------------------
 
-Route::get('/edit-profile/{user_id}', function () {
-    return view('edit-profile');
+
+//-------------------------- Guest Routes ------------------------------
+Route::middleware(['guest'])->group(function () {
+    
+    Route::view('/', 'home');
+    Route::view('/create-user', 'register');
+
 });
+//----------------------------------------------------------------------
 
-Route::get('/newsfeed', function () {
-    return view('newsfeed');
-})->middleware(['auth']);
 
-Route::get('/profile/{user_id}', function () {
-    return view('profile');
-});
+//------------------------- Public Routes ------------------------------
+Route::get('/profile/{user_id}', [UserController::class, 'showProfile']);
 
 Route::get('/post/{post_id}', function () {
     return view('single-post');
 });
+//----------------------------------------------------------------------
 

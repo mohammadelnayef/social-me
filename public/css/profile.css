@@ -9,8 +9,12 @@
     border-bottom: 1px solid #ccc;
 }
 .profile-head img{
-    max-width: 10.625rem;
     border-radius: 50%;
+    width: 12.5rem;
+    height: 12.5rem;
+    border: 5px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 8px 24px -15px #3d4253b3;
 }
 .profile-stats{
     display: flex;
