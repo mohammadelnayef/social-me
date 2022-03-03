@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,6 @@ Route::middleware(['guest'])->group(function () {
 
 });
 //----------------------------------------------------------------------
-
 
 //------------------------- Public Routes ------------------------------
 Route::get('/profile/{user_id}', [UserController::class, 'showProfile']);

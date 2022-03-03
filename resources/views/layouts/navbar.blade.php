@@ -15,6 +15,7 @@
         </div>
       </form>
       <div class="account">
+        @auth
           <a href="/newsfeed"><i class="bi bi-house-door-fill"></i>Newsfeed</a>
           @empty(Auth::user()->profile_img)
             <a href="/profile/{{ Auth::id() }}"><img src="/img/avatar.png" alt="profile picture">{{ Auth::user()->user_id }}</a>
@@ -24,8 +25,13 @@
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST">
           @csrf
-          </form>
-          
+          </form> 
+        @endauth
+        @guest
+            <p class="d-flex mb-0">
+              <a class="me-2" href="/">Log in</a> or <a class="ms-2" href="/create-user">create an account</a>
+            </p>  
+        @endguest
       </div>
     </div>
 </nav>

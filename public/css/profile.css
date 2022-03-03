@@ -26,6 +26,7 @@
 }
 .profile-info{
     max-width: 25rem;
+    width: 100%;
 }
 .profile-info h1{
     font-size: 1rem;

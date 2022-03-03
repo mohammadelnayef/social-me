@@ -42,21 +42,21 @@
 
                     <div class="mb-3">
                       <label for="exampleInputName" class="form-label">User ID</label>
-                      <input type="text" name="user_id" class="form-control" id="exampleInputUserId" aria-describedby="nameHelp">
+                      <input type="text" name="user_id" value="{{Auth::user()->user_id}}" class="form-control" id="exampleInputUserId" aria-describedby="nameHelp">
                     </div>
 
                     <div class="mb-3">
                       <label for="exampleInputName" class="form-label">Full Name</label>
-                      <input type="text" name="full_name" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                      <input type="text" name="full_name" value="{{Auth::user()->name}}" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
                     </div>
 
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3">{{Auth::user()->description}}</textarea>
                     </div>
 
                     <button type="submit" class="btn btn-warning">Update</button>
-                    <a href="/profile/placeholder" class="btn btn-danger">Cancel</a>
+                    <a href="/profile/{{ Auth::id() }}" class="btn btn-danger">Cancel</a>
                   </form>
                </div>
             </div>

@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateUserProfileRequest;
 use App\Services\UserService;
+use App\Models\User;
 use Auth;
+
 
 class UserController extends Controller
 {
@@ -13,12 +15,21 @@ class UserController extends Controller
         return view('newsfeed');
     }
 
-    public function editProfile(){
-        return view('edit-profile');
+    public function editProfile(Request $request){
+        $userId = $request->segment(2);
+
+        if($userId != Auth::id()){
+            return abort(401);
+        }
+        else{  
+            return view('edit-profile');
+        }
     }
 
-    public function showProfile(){
-        return view('profile');
+    public function showProfile(Request $request){
+        $userId = $request->segment(2);
+        $user = User::findOrFail($userId);
+        return view('profile', ['user' => $user]); 
     }
 
     public function updateUserProfile(UpdateUserProfileRequest $request){

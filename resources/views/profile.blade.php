@@ -12,26 +12,33 @@
         <div class="col-12">
             <div class="profile-head">
                 <div class="profile-picture">
-                    @empty(Auth::user()->profile_img)
+                    @empty($user->profile_img)
                     <img src="/img/avatar.png" alt="Profile Picture">
                     @endempty
-                    <img src="{{ Storage::url(Auth::user()->profile_img) }}" alt="Profile Picture">
+                    <img src="{{ Storage::url($user->profile_img) }}" alt="Profile Picture">
                     
                     
                 </div>
                 <div class="profile-info">
-                    <h2>{{ Auth::user()->user_id }}</h2>
+                    <h2>{{ $user->user_id }}</h2>
                     <div class="profile-stats">
                         <p><b>50</b> posts</p>
                         <p><b>100</b> followers</p>
                         <p><b>130</b> following</p>
                     </div>
-                    <h1>{{ Auth::user()->name }}</h1>
+                    <h1>{{ $user->name }}</h1>
                     <div class="profile-bio">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, error.
+                        @empty($user->description)
+                            <p>No description.</p>
+                        @endempty
+                        {{$user->description}}
                     </div>
+                    @if (Request::segment(2) == Auth::id())    
+                    <a class="btn btn-warning mt-2" href="/edit-profile/{{ $user->id }}">Edit Profile</a> 
+                    @endif
+                    @if (Auth::check() && Auth::id() != Request::segment(2))  
                     <a class="btn btn-success mt-2" href="">Follow</a> 
-                    <a class="btn btn-warning mt-2" href="/edit-profile/{{ Auth::id() }}">Edit Profile</a> 
+                    @endif
                 </div>
             </div>
             <div class="profile-body">
