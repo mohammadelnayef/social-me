@@ -28,13 +28,24 @@ class UpdateUserProfileRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(Request $request)
     {
-        return [
-            'profile_img' => 'mimes:jpg,bmp,png|max:5100',
-            'user_id' => 'required|unique:users|max:35',
-            'full_name' => 'required|max:35',
-            'description' => 'max:255'
-        ];
+        if(isset($request->user_id) && $request->user_id == Auth::user()->user_id){
+            return [
+                'profile_img' => 'mimes:jpg,bmp,png|max:5100',
+                'user_id' => 'required|max:35',
+                'full_name' => 'required|max:35',
+                'description' => 'max:255'
+            ];
+        }
+        else{
+            return [
+                'profile_img' => 'mimes:jpg,bmp,png|max:5100',
+                'user_id' => 'required|unique:users|max:35',
+                'full_name' => 'required|max:35',
+                'description' => 'max:255'
+            ]; 
+        }
+        
     }
 }

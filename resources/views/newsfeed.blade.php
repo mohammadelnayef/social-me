@@ -10,6 +10,20 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <div class="add-post mt-4">
+                <form action="{{ route('update.profile') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="mb-3">
+                      <p class="text-center fw-bold">Create a post</p>
+                      <input type="text" placeholder="Post description" name="full_name" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3">
+                        <input name="profile_img" placeholder="Upload photo" class="form-control" type="file" id="formFile">
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Post</button>
+                  </form>
+            </div>
             <div class="post-card">
                 <div class="post-card-header">
                     <a href="/profile/placeholder"><img src="/img/avatar.png" alt="">Username</a>

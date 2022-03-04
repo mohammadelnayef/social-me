@@ -21,7 +21,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/newsfeed', [UserController::class, 'showNewsfeed'])->name('newsfeed');
     Route::get('/edit-profile/{user_id}', [UserController::class, 'editProfile'])->name('edit.profile');
     Route::post('/update-profile',[UserController::class,'updateUserProfile'])->name('update.profile');
-    
+    // Route::post('/create-post',[PostController::class,'createPost'])->name('create.post');
+      
 });
 //-----------------------------------------------------------------------
 

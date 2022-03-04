@@ -11,10 +11,12 @@
             <div class="row update-row">
                <div class="col-6">
                    <div class="img-wrap">
-                        @empty(Auth::user()->profile_img)
+                       @empty(Auth::user()->profile_img)
                        <img id="tmpImg" width="100%"src="/img/avatar.png" alt="Temp profile picture">
                        @endif
+                       @isset(Auth::user()->profile_img)
                        <img id="tmpImg" width="100%"src="{{ Storage::url(Auth::user()->profile_img) }}" alt="profile picture">
+                       @endisset
                    </div>
                </div>
                <div class="col-6 form-wrap">

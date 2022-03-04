@@ -15,7 +15,9 @@
                     @empty($user->profile_img)
                     <img src="/img/avatar.png" alt="Profile Picture">
                     @endempty
+                    @isset($user->profile_img)
                     <img src="{{ Storage::url($user->profile_img) }}" alt="Profile Picture">
+                    @endisset
                     
                     
                 </div>

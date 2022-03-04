@@ -48,3 +48,11 @@
     margin-bottom: 0;
     color: #9e9e9e;
 }
+.add-post{
+    max-width: 34rem;
+    padding: 2rem;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #4d36f84d;
+    border-radius: 8px;
+}

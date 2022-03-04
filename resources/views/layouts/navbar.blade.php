@@ -20,7 +20,9 @@
           @empty(Auth::user()->profile_img)
             <a href="/profile/{{ Auth::id() }}"><img src="/img/avatar.png" alt="profile picture">{{ Auth::user()->user_id }}</a>
           @endempty
+          @isset(Auth::user()->profile_img)
           <a href="/profile/{{ Auth::id() }}"><img src="{{ Storage::url(Auth::user()->profile_img) }}" alt="profile picture">{{ Auth::user()->user_id }}</a>
+          @endisset
           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bi bi-door-open-fill"></i>Sign Out</a>
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST">
