@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-12">
             <div class="add-post mt-4">
-                <form action="{{ route('update.profile') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                       <p class="text-center fw-bold">Create a post</p>

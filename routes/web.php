@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
 use App\Models\User;
 
 /*
@@ -21,7 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/newsfeed', [UserController::class, 'showNewsfeed'])->name('newsfeed');
     Route::get('/edit-profile/{user_id}', [UserController::class, 'editProfile'])->name('edit.profile');
     Route::post('/update-profile',[UserController::class,'updateUserProfile'])->name('update.profile');
-    // Route::post('/create-post',[PostController::class,'createPost'])->name('create.post');
+    Route::resource('post', PostController::class)->except(['create']);
       
 });
 //-----------------------------------------------------------------------
